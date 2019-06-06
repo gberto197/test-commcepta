@@ -2,11 +2,11 @@
   <div class="header">
     <div class="nav-bar">
       <b-container>
-        <b-navbar toggleable="lg" type="dark">
+        <b-navbar toggleable="md" type="dark">
           <b-navbar-brand href="#">
-            <img :src="require(`@/assets/images/logo.png`)" alt>
+            <img :src="require(`@/assets/images/logo.png`)" alt="logo">
           </b-navbar-brand>
-          <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+          <b-navbar-toggle target="nav-collapse" type="button" class="custom-toggler"></b-navbar-toggle>
           <b-collapse id="nav-collapse" is-nav>
             <b-navbar-nav class="ml-auto">
               <b-navbar-nav class="links-navbar">
@@ -46,6 +46,10 @@ export default {};
     a {
       color: white;
     }
+  }
+  
+  .custom-toggler {
+    border-color: rgba(255, 255, 256, 0.5)
   }
 }
 </style>
