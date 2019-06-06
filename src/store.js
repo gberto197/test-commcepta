@@ -6,12 +6,17 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    team: []
+    team: [],
+    people: []
   },
 
   mutations: {
     LOAD_TEAM (state, team) {
       state.team = team
+    },
+
+    SELECT_PEOPLE (state, people) {
+      state.people = people
     }
   },
 

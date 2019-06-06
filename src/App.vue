@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    Home page!
     <router-view/>
   </div>
 </template>
@@ -12,5 +11,10 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  background-color: #eeeeee
+}
+body, html, #app {
+  width: 100%;
+  height: 100%;;
 }
 </style>
