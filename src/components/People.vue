@@ -1,11 +1,19 @@
 <template>
   <div class="people">
-    People component!
+    {{people.id}}
   </div>
 </template>
 
 <script>
 export default {
+  props: {
+    people: {
+      type: Array,
+      required: true
+    }
+  },
 
+  mounted () {
+  }
 }
 </script>

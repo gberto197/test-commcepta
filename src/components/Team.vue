@@ -1,12 +1,21 @@
 <template>
   <div class="team">
     Team component!
+    <div v-for="people in team" :key="people.id">
+      <People :people="people">
+
+      </People>
+    </div>
   </div>
 </template>
 
 <script>
 import { mapActions, mapState } from 'vuex'
+import People from '@/components/People.vue'
 export default {
+  components: {
+    People
+  },
 
   computed: {
     ...mapState({
