@@ -2,12 +2,12 @@
   <div class="people" @click.prevent="selectPeople(people)">
     <b-row>
       <b-col lg="6">
-        <img :src="getImageUrl(people)" />
+        <img class="people-photo" :src="getImageUrl(people)" />
       </b-col>
 
       <b-col lg="6" class="people-info">
         <p class="people-name">{{people.nome}}</p>
-        <p class="people-office">{{people.cargo}}</p>
+        <p class="people-office" :class="{'is-selected-people' : isSelectedPeople(people)}">{{people.cargo}}</p>
       </b-col>
     </b-row>
     
@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import { mapActions } from 'vuex'
+import { mapActions, mapState } from 'vuex'
 
 export default {
   props: {
@@ -23,6 +23,12 @@ export default {
       type: Object,
       required: true
     }
+  },
+
+  computed: {
+    ...mapState({
+      selectedPeople: state => state.people
+    })
   },
 
   mounted () {
@@ -36,6 +42,10 @@ export default {
 
     selectPeople (people) {
       this.$store.commit('SELECT_PEOPLE', people)
+    },
+    
+    isSelectedPeople (people) {
+      return people === this.selectedPeople
     }
   }
 }
@@ -58,6 +68,14 @@ export default {
 
   .people-office {
     color: #707070;
+  }
+
+  .people-photo {
+    border-radius: 100%;
+  }
+
+  .is-selected-people {
+    color: white;
   }
 }
 </style>
