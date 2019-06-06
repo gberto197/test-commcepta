@@ -3,6 +3,7 @@
     <b-row>
       <b-col lg="6">
         <img class="people-photo" :src="getImageUrl(people)" />
+        <div class="badge">{{people.id}}</div>
       </b-col>
 
       <b-col lg="6" class="people-info">
@@ -15,7 +16,7 @@
 </template>
 
 <script>
-import { mapActions, mapState } from 'vuex'
+import { mapState } from 'vuex'
 
 export default {
   props: {
@@ -72,6 +73,19 @@ export default {
 
   .people-photo {
     border-radius: 100%;
+  }
+
+  .badge {
+    position: absolute;
+    font-size: 1rem;
+    right: 25px;
+    height: 30px;
+    width: 30px;
+    padding: 7px;
+    background-color: #4DD1D3;
+    color: #002b50;
+    border-radius: 50%;
+    font-weight: bold;
   }
 
   .is-selected-people {
