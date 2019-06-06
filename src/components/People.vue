@@ -1,12 +1,12 @@
 <template>
   <div class="people" @click.prevent="selectPeople(people)">
     <b-row>
-      <b-col lg="6">
+      <b-col col lg="8" md="12" xl="6">
         <img class="people-photo" :src="getImageUrl(people)" />
         <div class="badge">{{people.id}}</div>
       </b-col>
 
-      <b-col lg="6" class="people-info">
+      <b-col class="people-info">
         <p class="people-name">{{people.nome}}</p>
         <p class="people-office" :class="{'is-selected-people' : isSelectedPeople(people)}">{{people.cargo}}</p>
       </b-col>

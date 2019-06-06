@@ -5,7 +5,7 @@
         <b-container class="container-selected-people" fluid>
           <b-jumbotron class="jumbotron selected-people">
             <b-row>
-              <b-col lg="2">
+              <b-col lg="2" class="image-selected-people">
                 <img :src="getImageUrl(people)">
               </b-col>
               <!-- /col-lg-2 -->
@@ -128,6 +128,19 @@ export default {
 
       .selected-people {
         text-align: center;
+      }
+
+    }
+
+    @media (max-width: 768px) {
+      .informations-title {
+        float: left;
+        width: 50%;
+      }
+
+      .image-selected-people {
+        text-align: center;
+        margin-bottom: 1rem;
       }
     }
 
