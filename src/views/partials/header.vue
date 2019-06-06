@@ -3,11 +3,15 @@
     <div class="nav-bar">
       <b-container class="responsive-container">
         <b-navbar toggleable="md" type="dark" class="responsive-navbar">
+
           <b-navbar-brand href="#">
             <img :src="require(`@/assets/images/logo.png`)" alt="logo">
           </b-navbar-brand>
+
           <b-navbar-toggle target="nav-collapse" type="button" class="custom-toggler"></b-navbar-toggle>
+
           <b-collapse id="nav-collapse" is-nav>
+
             <b-navbar-nav class="ml-auto">
               <b-navbar-nav class="links-navbar">
                 <b-nav-item href="#" class="item-navbar">EMPRESA</b-nav-item>
@@ -15,16 +19,18 @@
                 <b-nav-item href="#" class="item-navbar">CONTATO</b-nav-item>
               </b-navbar-nav>
             </b-navbar-nav>
+            
           </b-collapse>
+
         </b-navbar>
       </b-container>
+
     </div>
-    <!-- <div style="background-color:red;">
-      <b-nav v-for="item in menuItems" :key="item.id">
-        <b-nav-item>{{item.label}}</b-nav-item>
-      </b-nav>
-    </div>-->
+    <!-- /nav-bar -->
+
   </div>
+  <!-- /header -->
+
 </template>
 
 <script>
