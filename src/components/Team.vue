@@ -132,7 +132,7 @@ export default {
 
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 813px) {
       .informations-title {
         float: left;
         width: 50%;

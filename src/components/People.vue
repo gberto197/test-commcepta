@@ -91,6 +91,12 @@ export default {
   .is-selected-people {
     color: white;
   }
+
+  @media (max-width: 813px) {
+    .badge {
+     right: 35px;
+    }
+  }
 }
 </style>
 
